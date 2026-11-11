@@ -19,4 +19,4 @@ jobs:
       - name: Build và kiểm thử (gồm Testcontainers nếu có)
         run: |
           chmod +x mvnw
-          mvn -B verify
+          ./mvn -B verify
