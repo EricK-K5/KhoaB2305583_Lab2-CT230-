@@ -1,0 +1,18 @@
+spring:
+  application:
+    name: catalog-service
+
+  datasource:
+    url: ${CATALOG_DB_URL:jdbc:postgresql://localhost:5433/catalog}
+    username: ${CATALOG_DB_USER:catalog}
+    password: ${CATALOG_DB_PASSWORD:catalog-lab}
+
+  jpa:
+    open-in-view: false
+    hibernate:
+      ddl-auto: validate
+
+  flyway:
+    enabled: true
+    locations: classpath:db/migration
+    baseline-on-migrate: false
